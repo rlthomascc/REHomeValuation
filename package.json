@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack -d --watch",
-    "server": "nodemon server/index.js",
+    "build": "webpack",
+    "server": "node server/index.js",
     "start": "webpack && node server/index.js"
   },
   "author": "Randy Thomas",
