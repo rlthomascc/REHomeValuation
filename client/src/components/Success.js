@@ -6,6 +6,7 @@ import {
 } from 'react-icons/fa';
 import ReactPixel from 'react-facebook-pixel';
 import Navbar from './Navbar';
+import Footer from './Footer';
 
 
 class Success extends Component {
@@ -29,7 +30,7 @@ class Success extends Component {
             <br />
             <br />
           </p>
-          <p className="h5 successTag font-weight-bold text-light text-center">
+          <p className="h4 successTag font-weight-bold text-light text-center">
             Someone will be in touch with your Comparative Market Analysis.
           </p>
         </div>s
@@ -40,9 +41,16 @@ class Success extends Component {
 
   render() {
     return (
-      <div className="mainContainer">
-        <Navbar />
-        {this.header()}
+      <div className="mainContainer d-flex flex-column">
+        <div className="p2">
+          <Navbar />
+        </div>
+        <div className="p2">
+          {this.header()}
+        </div>
+        <div className="p2">
+          <Footer />
+        </div>
       </div>
     );
   }

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack",
+    "build": "webpack -d --watch",
     "server": "node server/index.js",
     "start": "webpack && node server/index.js"
   },
@@ -24,7 +24,7 @@
     "mongoose": "^5.9.7",
     "react-awesome-modal": "^2.0.5",
     "request": "^2.81.0",
-    "webpack": "^4.28.3"
+    "webpack": "^4.43.0"
   },
   "dependencies": {
     "axios": "^0.18.0",
@@ -47,6 +47,6 @@
     "react-scripts": "^2.1.2",
     "style-loader": "^0.23.1",
     "twilio": "^3.33.2",
-    "webpack": "^4.28.3"
+    "webpack": "^4.43.0"
   }
 }

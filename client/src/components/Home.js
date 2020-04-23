@@ -30,6 +30,7 @@ import {
 import ReactPixel from 'react-facebook-pixel';
 import PlacesAutocomplete from 'react-places-autocomplete';
 import Navbar from './Navbar';
+import Footer from './Footer';
 
 
 class Home extends Component {
@@ -92,31 +93,32 @@ class Home extends Component {
     return (
       <div className="bannerContainer2">
         <p className="h1 text-center font-weight-bold">How Much Is Your Home Worth?</p>
-        <form onSubmit={this.handleSubmitForm2.bind(this)} id="getQuoteForm2">
-          <div className="formHousing">
-            <br />
-            <div className="row">
-              <div className="col">
+        <div className="formHousing">
+        <form className="text-center form" onSubmit={this.handleSubmitForm2.bind(this)} id="getQuoteForm2">
+            <div className="form-row align-items-center">
+              <div className="col-lg">
                 <label className="col-form-label-lg font-weight-bold">First Name</label>
                 <input type="text" id="firstName" className="form-control form-control-lg" placeholder="John" required />
               </div>
-              <div className="col">
+              <div className="col-lg">
                 <label className="col-form-label-lg font-weight-bold">Last Name</label>
                 <input type="text" id="lastName" className="form-control form-control-lg" placeholder="Doe" required />
               </div>
             </div>
             <br />
-            <div className="row">
-              <div className="col">
+            <div className="form-row align-items-center">
+              <div className="col-lg">
                 <label className="col-form-label-lg font-weight-bold">Phone Number</label>
                 <input type="tel" id="phone" className="form-control form-control-lg" placeholder="12095555555" pattern=".{10,11}" required title="Phone Mumber MUST Include Area Code" required />
               </div>
-              <div className="col">
+              <div className="col-lg">
                 <label className="col-form-label-lg font-weight-bold">Email Address</label>
                 <input type="email" id="email" className="form-control form-control-lg" placeholder="JohnDoe@Gmail.com" required />
               </div>
             </div>
             <br />
+            <div className="form-row align-items-center">
+            <div className="col-lg">
             <label className="col-form-label-lg font-weight-bold">Address</label>
 
             <PlacesAutocomplete
@@ -159,14 +161,15 @@ class Home extends Component {
                 </div>
               )}
             </PlacesAutocomplete>
-
+            </div>
+            </div>
             <br />
             <br />
             <div className="homeButton">
-              <button type="submit" className="btn btn-lg">Get Your Home Value Now!</button>
+              <button type="submit" className="btn">Get Home Value</button>
             </div>
-          </div>
         </form>
+        </div>
       </div>
     );
   }
@@ -181,9 +184,16 @@ class Home extends Component {
     }
     if (this.state.redirect === false) {
       return (
-        <div classname="mainContainer">
-          <Navbar />
-          {this.bannerForm2()}
+        <div className="mainContainer d-flex flex-column">
+          <div className="p2">
+            <Navbar />
+          </div>
+          <div className="p2">
+            {this.bannerForm2()}
+          </div>
+          <div className="p2">
+            <Footer />
+          </div>
         </div>
       );
     }
